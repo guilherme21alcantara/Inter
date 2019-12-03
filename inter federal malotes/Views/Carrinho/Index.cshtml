@@ -1,0 +1,17 @@
+@model Pedido
+
+<h2>Carrinho</h2>
+
+<table class="table table-hover">
+    @foreach (var item in Model.Itens)
+    {
+        <tr>
+            <td>@item.Produto.Descricao</td>
+            <td>@item.Quantidade</td>
+            <td>@item.Produto.Valor</td>
+            <td>@item.ValorTotal</td>
+        </tr> 
+    }
+</table>
+
+<a href="#" class="btn btn-primary">Finalizar Compra</a>

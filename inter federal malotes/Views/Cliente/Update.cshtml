@@ -1,0 +1,22 @@
+@model ECommerce.Models.Cliente
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <div>@ViewBag.Mensagem</div>
+
+        <form action="/cliente/update/@Model.Cod_Cliente" method="post">
+
+            <input name="endereco" value="@Model.Endereco"/><br/>
+            <input name="razao_social" value="@Model.Razao_Social"/><br/>
+            <input name="nome_fantasia" value="@Model.Nome_Fantasia"/><br/>
+
+            <button>Salvar</button>
+
+        </form>
+
+    </body>
+</html>

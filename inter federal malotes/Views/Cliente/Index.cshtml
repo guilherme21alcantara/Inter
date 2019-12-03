@@ -1,0 +1,33 @@
+@using ECommerce.Models
+@model List<Cliente>
+
+@*comentario*@
+<!-- Comentário HTML -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    
+    <table>
+        @foreach(var cliente in Model)
+        {
+        <tr>
+            <td>@cliente.Cod_Cliente</td>
+            <td>@cliente.Endereco</td>
+            <td>@cliente.Razao_Social</td>
+            <td>@cliente.Nome_Fantasia</td>
+            <td>
+                <a href="/cliente/delete/@cliente.Cod_Cliente">Apagar</a>
+                <a href="/cliente/update/@cliente.Cod_Cliente">Editar</a>
+            </td>
+        </tr>
+        }
+    </table>
+
+    <a href="/cliente/create">Novo Cliente</a>
+
+</body>
+</html>
